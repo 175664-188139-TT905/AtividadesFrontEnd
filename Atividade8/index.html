@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Biblioteca de Games
+        </title>
+        <meta charset="UTF-8"/>
+        <script src="js/functions.js"></script>
+    </head>
+    <body>
+        <h2>Padrão REST</h2>
+        <a href="javascript:callFetchWithGet()">Get</a>
+        <a href="javascript:callFetchWithPost()">Post</a>
+        <a href="javascript:callFetchWithPut()">Put</a>
+        <a href="javascript:callFetchWithDelete(4)">Delete</a>
+        <p id="json"> </p>
+
+        <h2>Adicionar Jogo</h2>
+        <form id="postForm">
+        <label for="namegame">Nome:</label>
+        <input type="text" id ="namegame" name="Nome"/>
+        <label for="generogame">Genero:</label>
+        <input type="text" id ="generogame" name="Genero"/>
+        <label for="produtoragame">Produtora:</label>
+        <input type="text" id ="produtoragame" name="Produtora"/>
+        <button type="submit" onclick="return submitPost()">Submit</button>
+        </form>
+
+        <h2>Atualizar Jogo</h2>
+        <form id="putForm">
+        <label>Id:<input type="text" name="id"/></label>
+        <label>game:<input type="text" name="game"/></label>
+         <button type="submit" onclick="return submitPut()">Submit</button>
+         </form>
+
+         <h2>Deletar Jogo</h2>
+         <form id="deleteForm">
+         <label>Id:<input type="text" name="id"/></label>        
+          <button type="submit" onclick="return submitDelete()">Submit</button>
+          </form>
+    
+    </body>
+</html>
