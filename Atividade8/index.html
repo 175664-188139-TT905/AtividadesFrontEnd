@@ -8,12 +8,6 @@
         <script src="functions.js"></script>
     </head>
     <body>
-        <h2>Padrão REST</h2>
-        <a href="javascript:callFetchWithGet()">Get</a>
-        <a href="javascript:callFetchWithPost()">Post</a>
-        <a href="javascript:callFetchWithPut()">Put</a>
-        <a href="javascript:callFetchWithDelete(4)">Delete</a>
-        <p id="json"> </p>
 
         <h2>Adicionar Jogo</h2>
         <form id="postForm">
@@ -27,8 +21,9 @@
         </form>
 
         <h2>Atualizar Jogo</h2>
-
         <form id="putForm">
+        <label for="idgame">Id:</label>
+        <input type="text" id ="idgame" name="id"/>   
         <label for="namegame">Nome:</label>
         <input type="text" id ="namegame" name="namegame"/>
         <label for="generogame">Genero:</label>

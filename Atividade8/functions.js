@@ -77,7 +77,9 @@ function submitPost(){
     const Nome = form["namegame"].value;
     const Genero = form["generogame"].value;
     const Produtora = form["producergame"].value;
-    callFetchWithPost(Nome, Genero, Produtora);
+    if((Nome != '') && (Genero != '') && (Produtora != '')){
+        callFetchWithPost(Nome, Genero, Produtora);}
+        else{ alert('Preencha todos os campos!!!');}
 
     return false; // Evitar o reload da tela.
 }
@@ -88,7 +90,9 @@ function submitPut(){
     const Nome = form["namegame"].value;
     const Genero = form["generogame"].value;
     const Produtora = form["producergame"].value;
-    callFetchWithPut(id, Nome, Genero, Produtora);
+    if((id != '') && (Nome != '') && (Genero != '') && (Produtora != '')){
+        callFetchWithPut(id, Nome, Genero, Produtora);}
+        else{ alert('Preencha todos os campos!!!');}
     return false; // Evitar o reload da tela.
 }
 
