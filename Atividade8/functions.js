@@ -68,16 +68,21 @@ function submitPost(){
     console.log("entrei na função");
     
     const form = document.forms['postForm'];    
-    const game = form["game"].value;
-    callFetchWithPost(game);
+    const name = form["namegame"].value;
+    const genero = form["generogame"].value;
+    const producer = form["producergame"].value;
+    callFetchWithPost(name, genero, producer);
+
     return false; // Evitar o reload da tela.
 }
 
 function submitPut(){
     const form = document.forms['putForm'];  
     const id = form["id"].value;  
-    const game = form["game"].value;
-    callFetchWithPut(id, game);
+    const name = form["namegame"].value;
+    const genero = form["generogame"].value;
+    const producer = form["producergame"].value;
+    callFetchWithPut(id, name, genero, producer);
     return false; // Evitar o reload da tela.
 }
 
