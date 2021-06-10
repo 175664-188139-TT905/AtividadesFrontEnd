@@ -68,10 +68,10 @@ function submitPost(){
     console.log("entrei na função");
     
     const form = document.forms['postForm'];    
-    const name = form["namegame"].value;
-    const genero = form["generogame"].value;
-    const producer = form["producergame"].value;
-    callFetchWithPost(name, genero, producer);
+    const Nome = form["namegame"].value;
+    const Genero = form["generogame"].value;
+    const Produtora = form["producergame"].value;
+    callFetchWithPost(Nome, Genero, Produtora);
 
     return false; // Evitar o reload da tela.
 }
@@ -79,10 +79,10 @@ function submitPost(){
 function submitPut(){
     const form = document.forms['putForm'];  
     const id = form["id"].value;  
-    const name = form["namegame"].value;
-    const genero = form["generogame"].value;
-    const producer = form["producergame"].value;
-    callFetchWithPut(id, name, genero, producer);
+    const Nome = form["namegame"].value;
+    const Genero = form["generogame"].value;
+    const Produtora = form["producergame"].value;
+    callFetchWithPut(id, Nome, Genero, Produtora);
     return false; // Evitar o reload da tela.
 }
 
