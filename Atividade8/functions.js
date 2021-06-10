@@ -18,7 +18,7 @@ async function callFetchWithGet(){
     }
 }
 
-async function callFetchWithPost(game){
+async function callFetchWithPost(name, genero, producer){
     const options = {
         method : 'POST',
         mode: 'cors',
@@ -27,13 +27,16 @@ async function callFetchWithPost(game){
             'content-type' : 'application/json'
         },
         body :JSON.stringify({
-            'game' : game
+            "game":{
+                "Nome": name,
+                "Genero": genero,
+                "Produtora": producer}
         })
     }
     await fetch(url, options);
 }
 
-async function callFetchWithPut(id, newgame){
+async function callFetchWithPut(id, name, genero, producer){
     const options = {
         method : 'PUT',
         mode: 'cors',
@@ -42,7 +45,10 @@ async function callFetchWithPut(id, newgame){
             'content-type' : 'application/json'            
         }, 
         body :JSON.stringify({
-            'game' : newgame
+            "game":{
+                "Nome": name,
+                "Genero": genero,
+                "Produtora": producer}
         })
     }
     await fetch(`${url}${id}`, options);
