@@ -1,4 +1,5 @@
 let url = "https://tt905-175664-188139.herokuapp.com/gameslib/"
+let url2 = "https://tt905-175664-188139.herokuapp.com/database/"
 
 async function callFetchWithGet(){
     let headers = new Headers();
@@ -9,6 +10,7 @@ async function callFetchWithGet(){
     }
     const output = document.getElementById("json");
     const response = await fetch(url, options);
+    const response = await fetch(url2, options);
 
     if (response.status >= 200 && response.status <= 300){
         console.log("Funcionou");
@@ -34,6 +36,7 @@ async function callFetchWithPost(name, genero, producer){
         })
     }
     await fetch(url, options);
+    await fetch(url2, options);
 }
 
 async function callFetchWithPut(id, name, genero, producer){
@@ -52,6 +55,7 @@ async function callFetchWithPut(id, name, genero, producer){
         })
     }
     await fetch(`${url}${id}`, options);
+    await fetch(`${url2}${id}`, options);
 }
 
 async function callFetchWithDelete(id){
@@ -64,6 +68,7 @@ async function callFetchWithDelete(id){
         }
     }
     await fetch(`${url}${id}`, options);
+    await fetch(`${url2}${id}`, options);
 }
 
 /*
