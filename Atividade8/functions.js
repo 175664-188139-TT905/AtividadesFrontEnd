@@ -1,4 +1,4 @@
-let url = "https://tt905-175664-188139.herokuapp.com/database/"
+let url = "https://tt905-175664-188139.herokuapp.com/gameslib/"
 //let url2 = "https://tt905-175664-188139.herokuapp.com/database/"
 
 async function callFetchWithGet(){
